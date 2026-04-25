@@ -216,7 +216,7 @@ MODEL_CONFIG = {
     "causal_conv_kernel": 5,
 
     # Positional encoding
-    "max_seq_len": 61,            # Supports lookback up to 90 days + 1 [STOCK] token
+    "max_seq_len": 61,            # Supports lookback up to 60 days + 1 [STOCK] token
     "pos_encoding": "learnable",  # "learnable" or "sinusoidal"
 
     # Output scaling: learnable scalar α that multiplies the raw prediction.
