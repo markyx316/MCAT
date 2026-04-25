@@ -1,0 +1,40 @@
+# Core ML Framework
+torch>=2.0.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Data Fetching
+yfinance>=0.2.28
+requests>=2.28.0
+
+# Feature Engineering
+PyWavelets>=1.4.0      # Wavelet denoising (pywt)
+scipy>=1.10.0          # Statistical tests
+
+# Sentiment Pipeline (optional — install for FinBERT encoding)
+# transformers>=4.30.0   # HuggingFace Transformers (for FinBERT)
+# sentencepiece>=0.1.99  # Tokenizer dependency
+
+# VADER Sentiment (lightweight fallback)
+# vaderSentiment>=3.3.2
+
+# Fundamentals API (optional)
+# alpha_vantage>=2.3.1   # Or use requests directly
+
+# Macro Data (optional)
+# fredapi>=0.5.1
+
+# ML Baselines
+scikit-learn>=1.2.0
+
+# LightGBM Baseline (optional)
+# lightgbm>=4.0.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Data Storage
+pyarrow>=12.0.0        # Parquet file support
+
+# Reproducibility
+# torch deterministic mode is set in utils.py

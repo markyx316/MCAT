@@ -1,0 +1,613 @@
+{
+  "experiment": "lstm_concat",
+  "n_folds": 3,
+  "folds": [
+    {
+      "fold": 0,
+      "mae": 2.9800422191619873,
+      "rmse": 4.08734130859375,
+      "r2": -0.001640915870666504,
+      "ic": 0.05866437306115475,
+      "directional_accuracy": 0.5162666666666667,
+      "skill_score": -0.0015696287155151367,
+      "n_samples": 1875
+    },
+    {
+      "fold": 1,
+      "mae": 2.324944257736206,
+      "rmse": 3.414531946182251,
+      "r2": -0.026628732681274414,
+      "ic": -0.08526089598976079,
+      "directional_accuracy": 0.521763085399449,
+      "skill_score": 0.0017932653427124023,
+      "n_samples": 1815
+    },
+    {
+      "fold": 2,
+      "mae": 1.9430421590805054,
+      "rmse": 2.6349000930786133,
+      "r2": 0.004460155963897705,
+      "ic": 0.06882627712318917,
+      "directional_accuracy": 0.5460055096418733,
+      "skill_score": 0.015250921249389648,
+      "n_samples": 1815
+    }
+  ],
+  "aggregated": {
+    "mae": {
+      "mean": 2.4160096645355225,
+      "std": 0.42822265625
+    },
+    "rmse": {
+      "mean": 3.3789243698120117,
+      "std": 0.5934909582138062
+    },
+    "r2": {
+      "mean": -0.00793649721890688,
+      "std": 0.013450044207274914
+    },
+    "ic": {
+      "mean": 0.01407658473152771,
+      "std": 0.07036460938369882
+    },
+    "directional_accuracy": {
+      "mean": 0.5280117539026631,
+      "std": 0.012919857814576073
+    },
+    "skill_score": {
+      "mean": 0.005158185958862305,
+      "std": 0.007267496082931757
+    }
+  },
+  "data_provenance": {
+    "generated_at": "2026-04-18T23:40:30.855004",
+    "records": [
+      {
+        "ticker": "AAPL",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.738569"
+      },
+      {
+        "ticker": "MSFT",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.739990"
+      },
+      {
+        "ticker": "GOOGL",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.741545"
+      },
+      {
+        "ticker": "AMZN",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.743054"
+      },
+      {
+        "ticker": "META",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.744067"
+      },
+      {
+        "ticker": "NVDA",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.745056"
+      },
+      {
+        "ticker": "JPM",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.746142"
+      },
+      {
+        "ticker": "GS",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.747188"
+      },
+      {
+        "ticker": "JNJ",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.748108"
+      },
+      {
+        "ticker": "UNH",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.749112"
+      },
+      {
+        "ticker": "WMT",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.750034"
+      },
+      {
+        "ticker": "PG",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.750988"
+      },
+      {
+        "ticker": "XOM",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.751840"
+      },
+      {
+        "ticker": "CAT",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.752744"
+      },
+      {
+        "ticker": "DIS",
+        "modality": "price",
+        "source_type": "real",
+        "source_detail": "yfinance OHLCV (2264 days, cached)",
+        "n_features": 39,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:52.753662"
+      },
+      {
+        "ticker": "AAPL",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 20,720 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.749163"
+      },
+      {
+        "ticker": "MSFT",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 14,498 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.760044"
+      },
+      {
+        "ticker": "GOOGL",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 16,542 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.767145"
+      },
+      {
+        "ticker": "AMZN",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 16,009 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.773618"
+      },
+      {
+        "ticker": "META",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 7,598 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.779919"
+      },
+      {
+        "ticker": "NVDA",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 14,628 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.785175"
+      },
+      {
+        "ticker": "JPM",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 7,033 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.790973"
+      },
+      {
+        "ticker": "GS",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 12,674 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.796428"
+      },
+      {
+        "ticker": "JNJ",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 3,326 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.802074"
+      },
+      {
+        "ticker": "UNH",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 1,777 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.807580"
+      },
+      {
+        "ticker": "WMT",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 10,251 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.813458"
+      },
+      {
+        "ticker": "PG",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 1,504 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.818852"
+      },
+      {
+        "ticker": "XOM",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 9,228 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.824193"
+      },
+      {
+        "ticker": "CAT",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 5,019 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.829408"
+      },
+      {
+        "ticker": "DIS",
+        "modality": "sentiment",
+        "source_type": "real",
+        "source_detail": "FNSPID + FinBERT (768-dim, cached, 12,102 articles)",
+        "n_features": 769,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.834996"
+      },
+      {
+        "ticker": "AAPL",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.940705"
+      },
+      {
+        "ticker": "MSFT",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.942068"
+      },
+      {
+        "ticker": "GOOGL",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.943441"
+      },
+      {
+        "ticker": "AMZN",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.944633"
+      },
+      {
+        "ticker": "META",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.945768"
+      },
+      {
+        "ticker": "NVDA",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.947004"
+      },
+      {
+        "ticker": "JPM",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.948204"
+      },
+      {
+        "ticker": "GS",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.949322"
+      },
+      {
+        "ticker": "JNJ",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.950307"
+      },
+      {
+        "ticker": "UNH",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.951367"
+      },
+      {
+        "ticker": "WMT",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.952523"
+      },
+      {
+        "ticker": "PG",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.953539"
+      },
+      {
+        "ticker": "XOM",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.954531"
+      },
+      {
+        "ticker": "CAT",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.955580"
+      },
+      {
+        "ticker": "DIS",
+        "modality": "fundamentals",
+        "source_type": "real",
+        "source_detail": "Alpha Vantage API (10 features, cached)",
+        "n_features": 10,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:53.957643"
+      },
+      {
+        "ticker": "AAPL",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128354"
+      },
+      {
+        "ticker": "MSFT",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128377"
+      },
+      {
+        "ticker": "GOOGL",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128388"
+      },
+      {
+        "ticker": "AMZN",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128401"
+      },
+      {
+        "ticker": "META",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128410"
+      },
+      {
+        "ticker": "NVDA",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128419"
+      },
+      {
+        "ticker": "JPM",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128426"
+      },
+      {
+        "ticker": "GS",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128438"
+      },
+      {
+        "ticker": "JNJ",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128446"
+      },
+      {
+        "ticker": "UNH",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128453"
+      },
+      {
+        "ticker": "WMT",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128461"
+      },
+      {
+        "ticker": "PG",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128469"
+      },
+      {
+        "ticker": "XOM",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128476"
+      },
+      {
+        "ticker": "CAT",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128483"
+      },
+      {
+        "ticker": "DIS",
+        "modality": "macro",
+        "source_type": "real",
+        "source_detail": "yfinance + FRED CSV (3 series: FEDFUNDS, T10Y2Y, UNRATE) = 18 total features (cached)",
+        "n_features": 18,
+        "coverage_pct": 100.0,
+        "timestamp": "2026-04-18T23:36:54.128490"
+      }
+    ],
+    "summary": {
+      "n_total": 60,
+      "n_real": 60,
+      "n_synthetic": 0,
+      "n_partial": 0
+    }
+  }
+}
