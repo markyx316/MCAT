@@ -1,2 +1,5 @@
-# MCAT
-CPSC 5520 Final Research Project Code Repo - MCAT
+# MCAT: Multi-Modal Cross-Attention Transformer for Equity Return Forecasting
+
+**Name:** Youxuan Ma
+
+**Email:** youxuan.ma@yale.edu
